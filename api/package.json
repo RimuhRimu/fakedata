@@ -5,7 +5,26 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "start": "node lib/server.js",
+=======
+<<<<<<< HEAD
+    "start": "node lib/index.js",
+    "build": "echo None",
+    "dev": "node --watch lib/index.js",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "start": "node lib/index.js",
+    "build": "echo None",
+    "dev": "node --watch lib/index.js",
+=======
+    "start": "node lib/server.js",
+>>>>>>> d218932 (chore(start): add start command for deployment)
+=======
+>>>>>>> 9f76933 (Initial commit)
+>>>>>>> 55707cc (Initial commit)
+>>>>>>> 8e9bc4c (Initial commit)
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,7 +32,15 @@
   "license": "ISC",
   "dependencies": {
     "@ai-sdk/openai": "0.0.37",
+<<<<<<< HEAD
     "@types/node": "^20.14.11",
+=======
+<<<<<<< HEAD
+    "@types/node": "^20.14.13",
+=======
+    "@types/node": "^20.14.11",
+>>>>>>> 9f76933 (Initial commit)
+>>>>>>> 8e9bc4c (Initial commit)
     "ai": "3.2.32",
     "dotenv": "16.4.5",
     "express": "4.19.2",
