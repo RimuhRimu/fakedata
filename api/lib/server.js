@@ -21,9 +21,9 @@ app.get("/api", (req, res, next) => {
     res.status(422).json({ message: JSON.parse(result.error.message) });
   }
 
-  const { type, description, schema, limit } = result.data;
+  const { type, description, schema, limit, model } = result.data;
 
-  generateFakeData(type, description, schema, limit)
+  generateFakeData(type, description, schema, limit, model)
     .then((fakeData) => {
       const types = {
         json: () => {

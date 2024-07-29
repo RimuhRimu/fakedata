@@ -17,6 +17,7 @@ export async function generateFakeData(
   description,
   schema = z.unknown(),
   limit = 10,
+  model = 'llama3-8b-8192'
 ) {
   try {
     // Generate the GROQ query dynamically
@@ -26,7 +27,7 @@ export async function generateFakeData(
     `;
 
     const res = await generateObject({
-      model: groq("llama3-8b-8192"),
+      model: groq(model),
       prompt: groqQuery,
       system:
         "You are a helpful assistant that generates fake data according to the given instructions",
