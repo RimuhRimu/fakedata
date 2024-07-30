@@ -14,7 +14,7 @@ app.listen(port, () => {
 app.use(express.json());
 
 //Fake data handler
-app.get("/api", (req, res, next) => {
+app.post("/api", (req, res, next) => {
   const result = validateObj(req.body);
 
   if (result.error) {
