@@ -15,6 +15,7 @@ app.use(express.json());
 
 //Fake data handler
 app.post("/api", (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
   const result = validateObj(req.body);
 
   if (result.error) {
