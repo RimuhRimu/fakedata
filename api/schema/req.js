@@ -15,7 +15,7 @@ const apiReq = z.object({
   type: z.enum(["json", "csv"]),
   description: z.string().max(100),
   schema: z.unknown().optional(),
-  limit: z.number().min(1).max(50),
+  limit: z.number().min(1).max(50).optional(),
   model: z.enum(models).optional(),
 });
 
