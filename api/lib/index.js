@@ -6,6 +6,10 @@ const app = express();
 app.disable("x-powered-by");
 const port = process.env.PORT ?? 8080;
 
+app.listen(port, () => {
+  console.log(`Server Listening on port ${port}`);
+});
+
 //JSON middleware
 app.use(express.json());
 
