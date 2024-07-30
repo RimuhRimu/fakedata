@@ -10,8 +10,31 @@ app.listen(port, () => {
   console.log(`Server Listening on port ${port}`);
 });
 
+const clientsRequest = {}
+
+const maxRequestInHour = 50
+
 //JSON middleware
 app.use(express.json());
+
+//rate limit middleware
+app.use((req, res, next) => {
+  const currentTime = Date.now()
+  const clientIp = req.socket.address().address
+  const maxTime = 60 * 60 * 1000 //hours in milliseconds
+
+  if (!clientsRequest[clientIp]) {
+    clientsRequest[clientIp] = [{ time: currentTime }]
+  } else {
+    clientsRequest[clientIp] = clientsRequest[clientIp].filter(request => currentTime - request.time < maxTime)
+    if (clientsRequest[clientIp].length > maxRequestInHour) {
+      res.status(429).json({ message: "Request limit exceeded, users are limited 50 request per hour, please wait" })
+    }
+    clientsRequest[clientIp].push({ time: currentTime })
+  }
+
+  next()
+})
 
 //Fake data handler
 app.post("/api", (req, res, next) => {
