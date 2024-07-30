@@ -28,7 +28,7 @@ POST fakedata-rmye.onrender.com/api
 - **Default**: 10
 
 ### model
-  Which model will generate the data. By default it uses llama3-8b-8192
+  Which model will generate the data. By default it uses llama3-8b-8192. Check the groq [models](https://console.groq.com/docs/models).
 - **Type**: String
 - **Options**:
 ```javascript
