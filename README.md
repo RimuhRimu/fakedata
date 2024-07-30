@@ -71,11 +71,3 @@ fakedata-rmye.onrender.com/api
   ...
 ]
 ```
-
-## Error Handling
-
-If an error occurs during the generation of fake data, the API will respond with an HTTP status code indicating the nature of the error and a message describing the issue.
-
-## Rate Limiting
-
-To prevent abuse, the API has rate limiting in place.
