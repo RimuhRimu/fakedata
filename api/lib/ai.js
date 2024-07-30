@@ -17,7 +17,7 @@ export async function generateFakeData(
   description,
   schema = z.unknown(),
   limit = 10,
-  model = 'llama3-8b-8192'
+  model = "llama3-8b-8192",
 ) {
   try {
     // Generate the GROQ query dynamically
@@ -42,6 +42,12 @@ export async function generateFakeData(
     return type === "csv" ? json2csv(res.object.data.entries) : res.object.data;
   } catch (error) {
     console.error("Error generating fake data:", error);
+<<<<<<< HEAD
     throw new Error("Failed to generate fake data");
+=======
+    throw new Error(
+      "Failed to generate fake data, please check you prompt and try again",
+    );
+>>>>>>> 45d777c (chore(deploy): swap provider)
   }
 }
