@@ -22,7 +22,7 @@ fakedata-rmye.onrender.com/api
 - **Example**: "users of a social media"
 
 ### limit
-  The maximum number of records to generate.
+  The maximum number of records to generate. Can be skipped, by default it is 10.
 - **Type**: Integer
 - **Range**: 1-50
 - **Default**: 10
