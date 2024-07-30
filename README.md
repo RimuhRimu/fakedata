@@ -32,22 +32,22 @@ fakedata-rmye.onrender.com/api
 - **Type**: Object
 ```json
 {
-    "type": "json",
-		"description": "users of a social media",
-		"limit": 50,
-		"schema": {
-			"id": "number",
-			"name": "string",
-			"username": "string",
-			"picture": "string",
-			"followers": "integer",
-			"following": "integer",
-			"email": "string",
-			"posts": {
-				"total": "integer",
-				"lastWeek": "integer"
-			}
-		}
+  "type": "json",
+  "description": "users of a social media",
+  "limit": 50,
+  "schema": {
+    "id": "number",
+    "name": "string",
+    "username": "string",
+    "picture": "string",
+    "followers": "integer",
+    "following": "integer",
+    "email": "string",
+    "posts": {
+      "total": "integer",
+      "lastWeek": "integer"
+    }
+  }
 }
 ```
 
