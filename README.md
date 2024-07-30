@@ -5,7 +5,7 @@ Welcome to the FakeData API documentation! This API allows you to generate fake 
 ## Endpoint
 
 ```
-fakedata-rmye.onrender.com/api
+POST fakedata-rmye.onrender.com/api
 ```
 
 ## Parameters
