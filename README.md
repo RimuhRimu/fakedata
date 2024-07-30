@@ -27,6 +27,24 @@ fakedata-rmye.onrender.com/api
 - **Range**: 1-50
 - **Default**: 10
 
+### model
+  Which model will generate the data. By default it uses llama3-8b-8192
+- **Type**: String
+- **Options**:
+```javascript
+const models = [
+  "llama3-8b-8192",
+  "mixtral-8x7b-32768",
+  "llama3-groq-8b-8192-tool-use-preview",
+  "llama3-groq-70b-8192-tool-use-preview",
+  "llama-3.1-8b-instant",
+  "llama-3.1-70b-versatile",
+  "gemma2-9b-it",
+  "gemma-7b-it",
+];
+```
+ - **Default**: llama3-8b-8192
+
 ### schema
   Defines the structure of the generated data. You can leave this field empty if you want to generate data in the default format created by the AI. I wrote an example request with the schema based on the description above.
 - **Type**: Object
@@ -50,6 +68,7 @@ fakedata-rmye.onrender.com/api
   }
 }
 ```
+The schema field accepts the following types: `number, string, array, integer and boolean`
 
 ## Example Response
 
