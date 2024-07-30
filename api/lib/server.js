@@ -5,13 +5,6 @@ import { validateObj } from "../schema/req.js";
 const app = express();
 app.disable("x-powered-by");
 const port = process.env.PORT ?? 8080;
-<<<<<<< HEAD
-=======
-
->>>>>>> 8e9bc4c (Initial commit)
-app.listen(port, () => {
-  console.log(`Server Listening on port ${port}`);
-});
 
 //JSON middleware
 app.use(express.json());
@@ -24,15 +17,9 @@ app.get("/api", (req, res, next) => {
     res.status(422).json({ message: JSON.parse(result.error.message) });
   }
 
-<<<<<<< HEAD
   const { type, description, schema, limit, model } = result.data;
 
   generateFakeData(type, description, schema, limit, model)
-=======
-  const { type, description, schema, limit } = result.data;
-
-  generateFakeData(type, description, schema, limit)
->>>>>>> 8e9bc4c (Initial commit)
     .then((fakeData) => {
       const types = {
         json: () => {
