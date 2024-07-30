@@ -5,7 +5,7 @@ Welcome to the FakeData API documentation! This API allows you to generate fake 
 ## Endpoint
 
 ```
-GET fakedata-rmye.onrender.com/api
+fakedata-rmye.onrender.com/api
 ```
 
 ## Parameters
@@ -30,7 +30,7 @@ GET fakedata-rmye.onrender.com/api
 ### schema
   Defines the structure of the generated data. You can leave this field empty if you want to generate data in the default format created by the AI. I wrote an example request with the schema based on the description above.
 - **Type**: Object
-`
+```json
 {
     "type": "json",
 		"description": "users of a social media",
@@ -49,7 +49,7 @@ GET fakedata-rmye.onrender.com/api
 			}
 		}
 }
-`
+```
 
 ## Example Response
 
