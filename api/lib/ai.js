@@ -28,6 +28,7 @@ export async function generateFakeData(
 
     const res = await generateObject({
       model: groq(model),
+      prompt: groqQuery,
       system:
         "You are a helpful assistant that generates fake data according to the given instructions",
       schema: z.object({
