@@ -14,7 +14,6 @@ POST fakedata-rmye.onrender.com/api
   Specifies the format of the generated data.
 - **Type**: String
 - **Options**: `json`, `csv`
-- **Default**: `json`
 
 ### description
   A brief description of the generated dataset.
