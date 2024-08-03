@@ -1,6 +1,6 @@
 import express from "express";
 import { generateFakeData } from "./ai.js";
-import { validateObj } from "../schema/req.js";
+import { validateObj, models } from "../schema/req.js";
 
 const app = express();
 app.disable("x-powered-by");
@@ -17,7 +17,14 @@ const maxRequestInHour = 50
 //JSON middleware
 app.use(express.json());
 
-//rate limit middleware
+app.options("/api", (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Methods", "POST")
+  res.header("Access-Control-Allow-Headers", "Content-Type")
+  res.sendStatus(200)
+})
+
+//Rate limit middleware
 app.use((req, res, next) => {
   const currentTime = Date.now()
   const clientIp = req.socket.address().address
@@ -28,13 +35,18 @@ app.use((req, res, next) => {
   } else {
     clientsRequest[clientIp] = clientsRequest[clientIp].filter(request => currentTime - request.time < maxTime)
     if (clientsRequest[clientIp].length > maxRequestInHour) {
-      res.status(429).json({ message: "Request limit exceeded, users are limited 50 request per hour, please wait" })
+      res.status(429).json({ message: `Request limit exceeded, users are limited ${maxRequestInHour} request per hour, please wait` })
     }
     clientsRequest[clientIp].push({ time: currentTime })
   }
 
   next()
 })
+
+app.get("/models", (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.json(models);
+});
 
 //Fake data handler
 app.post("/api", (req, res, next) => {

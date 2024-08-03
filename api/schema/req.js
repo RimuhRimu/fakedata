@@ -1,6 +1,6 @@
 import { z, ZodParsedType } from "zod";
 
-const models = [
+export const models = [
   "llama3-8b-8192",
   "mixtral-8x7b-32768",
   "llama3-groq-8b-8192-tool-use-preview",
