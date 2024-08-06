@@ -89,3 +89,5 @@ The schema field accepts the following types: `number, string, array, integer an
   ...
 ]
 ```
+# Limitations
+- Sadly, The AI usually will fail when asked more than 50 entries
