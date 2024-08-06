@@ -2,10 +2,11 @@
 
 Welcome to the FakeData API documentation! This API allows you to generate fake data for users of a social media platform. You can specify the type of data (JSON or CSV), the limit on the number of records, and customize the schema of the generated data.
 
-## Endpoint
+## Endpoints
 
 ```
 POST fakedata-rmye.onrender.com/api
+GET  fakedata-rmye.onrender.com/models
 ```
 
 ## Parameters
