@@ -68,7 +68,7 @@ const models = [
   }
 }
 ```
-The schema field accepts the following types: `number, string, array, integer and boolean`
+The schema's field accepts the following types: `number, string, array, integer and boolean`
 
 ## Example Response
 
