@@ -1,6 +1,6 @@
 # FakeData API Documentation
 
-Welcome to the FakeData API documentation! This API allows you to generate fake data for users of a social media platform. You can specify the type of data (JSON or CSV), the limit on the number of records, and customize the schema of the generated data.
+Welcome to the FakeData API documentation! This API allows you to generate fake data for testing purposes. You can specify the type of data (JSON or CSV), the limit on the number of records, and customize the schema of the generated data.
 
 ## Endpoints
 
